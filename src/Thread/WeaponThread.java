@@ -58,9 +58,9 @@ public class WeaponThread extends Thread {
 				weaponAlgorithm.setPopulation(populationM.getPopulation());
 			}
 			
-		//	System.out.println(System.currentTimeMillis());
+			//System.out.println(System.currentTimeMillis());
 			weaponAlgorithm.findAnswer();
-		//	System.out.println(System.currentTimeMillis());
+			//System.out.println(System.currentTimeMillis());
 			
 			// connection not stable
 			if (AT.getErrorRate() != 0) {
@@ -74,7 +74,7 @@ public class WeaponThread extends Thread {
 			
 			TC.addPopulation(localBestInstance);
 			
-			// if greedy and stop
+			// if greedy then stop
 			if (AT.getAlgorithm().equals("greedy") || AT.getAlgorithm().equals("bruteforce")) {
 				return;
 			}

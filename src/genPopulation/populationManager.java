@@ -61,12 +61,11 @@ public class populationManager {
 			}
 			double costValue = computeValue.computeVOneDD(ans);
 			Instance instance = getInstane(ans, costValue);
-			
+
 			if (compareValue.size() == 0) {
 				compareValue.add(costValue);
 				arrayPopulation.add(instance);
-				
-				
+
 			} else {
 				boolean same = false;
 				// compareSame
@@ -93,7 +92,7 @@ public class populationManager {
 	public ArrayList<Instance> filePopulation() {
 
 		arrayPopulation.clear();
-		
+
 		double ans[] = new double[arrX];
 
 		try {
@@ -153,15 +152,20 @@ public class populationManager {
 
 			}
 			if (!same) {
+				// compare the worst one and new one
+				if (arrayPopulation.get(arrayPopulation.size() - 1).getBestValue() > instance.getBestValue()) {
+					minusPopulation();
+					arrayPopulation.add(0, instance);
+				}
+			}
 
+		} else {
+			// compare the worst one and new one
+			if (arrayPopulation.get(arrayPopulation.size() - 1).getBestValue() > instance.getBestValue()) {
 				minusPopulation();
 				arrayPopulation.add(0, instance);
 			}
-		} else {
 
-			minusPopulation();
-			arrayPopulation.add(0, instance);
-			
 		}
 
 	}
@@ -175,13 +179,13 @@ public class populationManager {
 		return arrayPopulation;
 
 	}
-	
-	public Instance getInstane(double[] pos, double value){
-		
-		switch(AT.getAlgorithm()){
-		
+
+	public Instance getInstane(double[] pos, double value) {
+
+		switch (AT.getAlgorithm()) {
+
 		case "genetic":
-			
+
 			ChromOneD chromOneD = new ChromOneD(arrX);
 			chromOneD.setAns(pos);
 			chromOneD.setValue(value);
@@ -195,7 +199,7 @@ public class populationManager {
 			particle.initialVelocity(initialVelocityEdge);
 			return particle;
 		case "artificialbee":
-			Nectar nectar = new Nectar(arrX,limitNumber);
+			Nectar nectar = new Nectar(arrX, limitNumber);
 			nectar.setBestPos(pos);
 			nectar.setBestValue(value);
 			nectar.setFrequency(limitNumber);
@@ -207,8 +211,7 @@ public class populationManager {
 			return randomInstance;
 		}
 		return null;
-		
-		
+
 	}
 
 }

@@ -23,6 +23,7 @@ public class WeaponMain {
 			AT.initialAttribute();
 			
 			int totalThread = AT.getTotalThread();
+			
 			// threadControl set threadNum
 			ThreadControl TC = new ThreadControl(AT);
 
@@ -36,9 +37,9 @@ public class WeaponMain {
 				for (int i = 0; i < totalThread; i++) {
 					WeaponThread WT = new WeaponThread(TC, AT, i);
 					arrayThread.add(WT);
-					WT.start();
-					
+					WT.start();					
 				}
+				
 
 				for (WeaponThread WT : arrayThread) {
 					try {

@@ -1,4 +1,4 @@
-experimentTime: 2
+experimentTime: 1
 allRunTime: 10
 arrx: 14
 arry: 70
@@ -6,20 +6,8 @@ initialSolutionSet: true
 duplicate: false
 population: 100
 totalThread: 14
-exchangeNum: 10
-totalRun: 2900
+exchangeNum: 20
+totalRun: 1000
 errorRate: 0
-algorithm: randomalgorithm
-------------------------------------
-allRunTime: 10
-arrx: 14
-arry: 70
-initialSolutionSet: true
-duplicate: false
-population: 100
-totalThread: 14
-exchangeNum: 5
-totalRun: 5800
-errorRate: 0
-algorithm: randomalgorithm
+algorithm: genetic
 ------------------------------------
