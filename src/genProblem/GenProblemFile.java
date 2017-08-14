@@ -15,6 +15,7 @@ public class GenProblemFile implements GenProblemInter {
 		this.AT = AT;		
 	}
 
+	// read the value of target from the file.
 	@Override
 	public void genTarVal(int[] arr) {
 		// TODO Auto-generated method stub
@@ -34,7 +35,7 @@ public class GenProblemFile implements GenProblemInter {
 		}
 
 	}
-
+	//read the probability of weapon attack to target from the file.
 	@Override
 	public void genAtkPro(double[][] arr) {
 		// TODO Auto-generated method stub

@@ -49,25 +49,30 @@ public class Attribute {
 	public void readFile() {
 		String line;
 		try {
+			//each round has twelve line
 			while (lineNum != 12) {
 				line = br.readLine();
 				lineNum++;
 				String[] str = line.split(" ");
 
 				switch (str[0]) {
-
+				//weapon number
 				case "arrx:":
 					arrX = Integer.parseInt(str[1]);
 					break;
+				//target number
 				case "arry:":
 					arrY = Integer.parseInt(str[1]);
 					break;
+				// population size
 				case "population:":
 					population = Integer.parseInt(str[1]);
 					break;
+				// use how many thread to execute
 				case "totalThread:":
 					totalThread = Integer.parseInt(str[1]);
 					break;
+				// exchange time
 				case "exchangeNum:":
 					exchangeNum = Integer.parseInt(str[1]);
 					break;
@@ -89,6 +94,7 @@ public class Attribute {
 				case "errorRate:":
 					errorRate = Double.parseDouble(str[1]);				
 					break;
+				//the solution has duplicate?
 				case "duplicate:":
 					duplicate = Boolean.parseBoolean(str[1]);
 					break;

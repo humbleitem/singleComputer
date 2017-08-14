@@ -47,7 +47,7 @@ public class populationManager {
 		computeValue = new ComputeValue(atkPro, tarVal);
 
 	}
-
+	// return arraylist which store population , the poulation is random generate
 	public ArrayList<Instance> randomPopulation() {
 
 		arrayPopulation.clear();
@@ -89,6 +89,7 @@ public class populationManager {
 		return arrayPopulation;
 	}
 
+	// return arraylist which store population , the poulation is import from file
 	public ArrayList<Instance> filePopulation() {
 
 		arrayPopulation.clear();
@@ -118,7 +119,7 @@ public class populationManager {
 		return arrayPopulation;
 
 	}
-
+	//temporary store poulation in here
 	public void storePopulation(ArrayList<Instance> population) {
 
 		arrayPopulation.clear();
@@ -136,7 +137,7 @@ public class populationManager {
 		}
 
 	}
-
+	//add population in arrayPopulation
 	public void addPopulation(Instance instance) {
 
 		if (!AT.getDuplicate()) {
@@ -179,7 +180,7 @@ public class populationManager {
 		return arrayPopulation;
 
 	}
-
+	//inital the first population
 	public Instance getInstane(double[] pos, double value) {
 
 		switch (AT.getAlgorithm()) {

@@ -17,7 +17,7 @@ public class WeaponMain {
 		// read attribute
 		Attribute AT = new Attribute();
 
-		//total experimentTime
+		
 		for (int k = 0; k < AT.getExperimentTime(); k++) {
 			//reload attribute
 			AT.initialAttribute();

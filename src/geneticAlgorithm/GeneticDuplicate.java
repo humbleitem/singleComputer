@@ -52,13 +52,16 @@ public class GeneticDuplicate implements WeaponAlgorithm {
 				}
 			}
 			
-			
+			//reproduce the solution on top
 			reproduce();
 		
+			//choose chromosome to crossover
 			crossover();
 			
+			//choose chromosome to mutation
 			mutation();
 			
+			//use roulette to select
 			selection();
 			
 			

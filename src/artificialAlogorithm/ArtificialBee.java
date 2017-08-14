@@ -53,13 +53,16 @@ public class ArtificialBee implements WeaponAlgorithm {
 //					System.out.println(bestNectar.getBestValue());
 //				}
 //			}
-
+			//send employed bee
 			employedBee();
 
+			//send onlooker bee
 			onLookerBee();
 
+			//send scout bee
 			scoutBee();
 
+			//update best nectar
 			CompareBestNectar();
 		}
 		// System.out.println(bestBee.getBestValue());
@@ -213,7 +216,7 @@ public class ArtificialBee implements WeaponAlgorithm {
 		}
 
 	}
-
+	//check is the solution has exist
 	public boolean compareSame(double nectarValue) {
 
 		boolean same = false;

@@ -36,16 +36,16 @@ public class ThreadControl {
 
 	public synchronized void addPopulation(Instance instance) {
 
-
+		
 		if (clearList) {
 
 			clearList = false;
 			instanList.clear();
 		}
-
+		//add solution in instanList 
 		instanList.add(instance);
 		
-
+		//wait all thread add solution
 		if (waitThread < totalThread - 1) {
 
 			waitThread++;
@@ -63,7 +63,7 @@ public class ThreadControl {
 			sortArrayList();
 			// print value
 			printValue();
-
+			// notify all thread
 			notifyAll();
 
 		}
@@ -79,7 +79,7 @@ public class ThreadControl {
 		return instanList;
 
 	}
-
+	//sort solution 
 	public void sortArrayList() {
 		
 		int leng = instanList.size();
@@ -95,7 +95,7 @@ public class ThreadControl {
 		// System.out.println(instanList.size());
 
 	}
-
+	// print the best solution
 	public void printValue() {
 
 		// connection stable
@@ -108,7 +108,7 @@ public class ThreadControl {
 		}
 
 	}
-
+	
 	public synchronized void waitOtherThread() {
 
 		if (waitThread < totalThread - 1) {

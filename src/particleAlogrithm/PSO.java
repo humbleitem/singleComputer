@@ -47,9 +47,10 @@ public class PSO implements WeaponAlgorithm {
 					System.out.println(globalBestparticle.getBestValue());
 				}
 			}
-
+			//update the best particle position
 			adjustBestValue();
 
+			//update the position of particle
 			calculatePos();
 
 			compareBest();

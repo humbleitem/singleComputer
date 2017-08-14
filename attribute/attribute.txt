@@ -1,5 +1,5 @@
 experimentTime: 1
-allRunTime: 10
+allRunTime: 1
 arrx: 14
 arry: 70
 initialSolutionSet: true

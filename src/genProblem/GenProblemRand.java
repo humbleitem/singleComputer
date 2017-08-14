@@ -2,6 +2,7 @@ package genProblem;
 
 public class GenProblemRand implements GenProblemInter{
 
+	//// random the value of target .
 	@Override
 	public void genTarVal(int[] arr) {
 
@@ -11,6 +12,7 @@ public class GenProblemRand implements GenProblemInter{
 
 		}
 	}
+	//random the probability of weapon attack to target.
 	@Override
 	public void genAtkPro(double[][] arr) {
 		double tmp;
